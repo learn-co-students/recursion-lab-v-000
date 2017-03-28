@@ -1,6 +1,7 @@
 ### Recursion Lab!
 
 It turns out that there are a lot of interesting problems that can be solved with using recursion.  
+
 ![](https://s3-us-west-2.amazonaws.com/curriculum-content/web-development/algorithms/recursion-interesting.jpg)
 
 ### Working with strings
