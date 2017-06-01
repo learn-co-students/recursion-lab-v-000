@@ -10,7 +10,7 @@ afterEach(function() {
   expect.restoreSpies()
 })
 
-describe('#printString', function() {
+describe('printString()', function() {
   it("should print out all of the characters in a passed-in string", function() {
     printString('pizza')
 
@@ -33,7 +33,7 @@ describe('#printString', function() {
     expect(console.log).toHaveBeenCalledWith("e")
   });
 
-  it("calls the function once for each letter in the string", function() {
+  it("uses recursion, calling itself once for each letter in the string", function() {
     var printString = sinon.spy(window, "printString");
     printString("pizza")
     expect(printString.callCount).toEqual(5)
@@ -41,7 +41,7 @@ describe('#printString', function() {
 
 });
 
-describe('#reverseString', function() {
+describe('reverseString()', function() {
   it("should reverse all of the letters of a string", function() {
     expect(reverseString('pizza')).toEqual("azzip")
   });
@@ -54,7 +54,7 @@ describe('#reverseString', function() {
 });
 
 
-describe('#isPalindrome', function() {
+describe('isPalindrome()', function() {
   it("should return false when a string is not a palindrome", function() {
     expect(isPalindrome('pizza')).toEqual(false)
   });
@@ -70,7 +70,7 @@ describe('#isPalindrome', function() {
   })
 });
 
-describe('#addUpTo', function() {
+describe('addUpTo()', function() {
   it("should add up to a given index in an array", function() {
     expect(addUpTo([1, 4, 5, 3], 2)).toEqual(10)
   });
@@ -82,7 +82,7 @@ describe('#addUpTo', function() {
   });
 });
 
-describe('#maxOf', function() {
+describe('maxOf()', function() {
   it("should find the maximum integer in an array", function() {
     expect(maxOf([1, 4, 5, 3])).toEqual(5)
   });
@@ -95,7 +95,7 @@ describe('#maxOf', function() {
 });
 
 
-describe('#includesNumber', function() {
+describe('includesNumber()', function() {
   it("should return true if the number is included in the array", function() {
     expect(includesNumber([1, 4, 5, 3], 5)).toEqual(true)
   });
