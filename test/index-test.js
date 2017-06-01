@@ -3,41 +3,41 @@ var sinon = require('sinon');
 
 
 beforeEach(function() {
-  expect.spyOn(console, 'log')
-})
+  expect.spyOn(console, 'log');
+});
 
 afterEach(function() {
-  expect.restoreSpies()
-})
+  expect.restoreSpies();
+});
 
 describe('printString()', function() {
   it("should print out all of the characters in a passed-in string", function() {
-    printString('pizza')
+    printString('pizza');
 
-    expect(console.log).toHaveBeenCalledWith("p")
-    expect(console.log).toHaveBeenCalledWith("i")
-    expect(console.log).toHaveBeenCalledWith("z")
-    expect(console.log).toHaveBeenCalledWith("z")
-    expect(console.log).toHaveBeenCalledWith("a")
+    expect(console.log).toHaveBeenCalledWith("p");
+    expect(console.log).toHaveBeenCalledWith("i");
+    expect(console.log).toHaveBeenCalledWith("z");
+    expect(console.log).toHaveBeenCalledWith("z");
+    expect(console.log).toHaveBeenCalledWith("a");
 
-    printString('chocolate')
+    printString('chocolate');
 
-    expect(console.log).toHaveBeenCalledWith("c")
-    expect(console.log).toHaveBeenCalledWith("h")
-    expect(console.log).toHaveBeenCalledWith("o")
-    expect(console.log).toHaveBeenCalledWith("c")
-    expect(console.log).toHaveBeenCalledWith("o")
-    expect(console.log).toHaveBeenCalledWith("l")
-    expect(console.log).toHaveBeenCalledWith("a")
-    expect(console.log).toHaveBeenCalledWith("t")
-    expect(console.log).toHaveBeenCalledWith("e")
+    expect(console.log).toHaveBeenCalledWith("c");
+    expect(console.log).toHaveBeenCalledWith("h");
+    expect(console.log).toHaveBeenCalledWith("o");
+    expect(console.log).toHaveBeenCalledWith("c");
+    expect(console.log).toHaveBeenCalledWith("o");
+    expect(console.log).toHaveBeenCalledWith("l");
+    expect(console.log).toHaveBeenCalledWith("a");
+    expect(console.log).toHaveBeenCalledWith("t");
+    expect(console.log).toHaveBeenCalledWith("e");
   });
 
   it("uses recursion, calling itself once for each letter in the string", function() {
     var printString = sinon.spy(window, "printString");
-    printString("pizza")
-    expect(printString.callCount).toEqual(5)
-  })
+    printString("pizza");
+    expect(printString.callCount).toEqual(5);
+  });
 });
 
 describe('reverseString()', function() {
@@ -48,15 +48,15 @@ describe('reverseString()', function() {
 
   it("should make the proper recursive calls", function() {
     var reverseString = sinon.spy(window, "reverseString");
-    reverseString("pizza")
-    expect(reverseString.callCount).toEqual(5)
-  })
+    reverseString("pizza");
+    expect(reverseString.callCount).toEqual(5);
+  });
 });
 
 
 describe('isPalindrome()', function() {
   it("should return false when a string is not a palindrome", function() {
-    expect(isPalindrome('pizza')).toEqual(false)
+    expect(isPalindrome('pizza')).toEqual(false);
   });
 
   it("should return true when a string is a palindrome", function() {
@@ -67,46 +67,46 @@ describe('isPalindrome()', function() {
     var isPalindrome = sinon.spy(window, "isPalindrome");
     isPalindrome("madamimadam")
     expect(isPalindrome.callCount).toEqual(6)
-  })
+  });
 });
 
 describe('addUpTo()', function() {
   it("should add up to a given index in an array", function() {
-    expect(addUpTo([1, 4, 5, 3], 2)).toEqual(10)
+    expect(addUpTo([1, 4, 5, 3], 2)).toEqual(10);
   });
 
   it("should make the proper recursive calls", function() {
     var addUpTo = sinon.spy(window, "addUpTo");
-    addUpTo([1, 4, 5, 3], 2)
-    expect(addUpTo.callCount).toEqual(3)
+    addUpTo([1, 4, 5, 3], 2);
+    expect(addUpTo.callCount).toEqual(3);
   });
 });
 
 describe('maxOf()', function() {
   it("should find the maximum integer in an array", function() {
-    expect(maxOf([1, 4, 5, 3])).toEqual(5)
+    expect(maxOf([1, 4, 5, 3])).toEqual(5);
   });
 
   it("should make the proper recursive calls", function() {
     var maxOf = sinon.spy(window, "maxOf");
-    maxOf([1, 4, 5, 3])
-    expect(maxOf.callCount).toEqual(4)
+    maxOf([1, 4, 5, 3]);
+    expect(maxOf.callCount).toEqual(4);
   });
 });
 
 
 describe('includesNumber()', function() {
   it("should return true if the number is included in the array", function() {
-    expect(includesNumber([1, 4, 5, 3], 5)).toEqual(true)
+    expect(includesNumber([1, 4, 5, 3], 5)).toEqual(true);
   });
 
   it("should return false if the number is not included in the array", function() {
-    expect(includesNumber([1, 4, 2, 3], 5)).toEqual(false)
+    expect(includesNumber([1, 4, 2, 3], 5)).toEqual(false);
   });
 
   it("should make the proper recursive calls", function() {
     var includesNumber = sinon.spy(window, "includesNumber");
-    includesNumber([1, 4, 5, 3], 3)
-    expect(includesNumber.callCount).toEqual(4)
+    includesNumber([1, 4, 5, 3], 3);
+    expect(includesNumber.callCount).toEqual(4);
   });
 });

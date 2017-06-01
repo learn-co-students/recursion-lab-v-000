@@ -98,7 +98,7 @@ Uh oh, a wild infinite loop appeared! Remember, we always need to find the base 
 function printString(myString) {
   console.log(myString[0]);
 
-  if(myString.length > 1) {
+  if (myString.length > 1) {
     let mySubString = myString.substring(1, myString.length);
     printString(mySubString);
   } else {
