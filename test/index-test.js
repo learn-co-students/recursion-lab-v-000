@@ -19,6 +19,18 @@ describe('#printString', function() {
     expect(console.log).toHaveBeenCalledWith("z")
     expect(console.log).toHaveBeenCalledWith("z")
     expect(console.log).toHaveBeenCalledWith("a")
+
+    printString('chocolate')
+
+    expect(console.log).toHaveBeenCalledWith("c")
+    expect(console.log).toHaveBeenCalledWith("h")
+    expect(console.log).toHaveBeenCalledWith("o")
+    expect(console.log).toHaveBeenCalledWith("c")
+    expect(console.log).toHaveBeenCalledWith("o")
+    expect(console.log).toHaveBeenCalledWith("l")
+    expect(console.log).toHaveBeenCalledWith("a")
+    expect(console.log).toHaveBeenCalledWith("t")
+    expect(console.log).toHaveBeenCalledWith("e")
   });
 
   it("calls the function once for each letter in the string", function() {
