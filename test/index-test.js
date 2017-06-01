@@ -11,7 +11,7 @@ afterEach(function() {
 })
 
 describe('#printString', function() {
-  it("should print all of the ", function() {
+  it("should print out all of the characters in a passed-in string", function() {
     printString('pizza')
 
     expect(console.log).toHaveBeenCalledWith("p")
