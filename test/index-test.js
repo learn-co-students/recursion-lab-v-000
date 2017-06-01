@@ -42,7 +42,8 @@ describe('printString()', function() {
 
 describe('reverseString()', function() {
   it("should reverse all of the letters of a string", function() {
-    expect(reverseString('pizza')).toEqual("azzip")
+    expect(reverseString('pizza')).toEqual("azzip");
+    expect(reverseString('chocolate')).toEqual("etalocohc");
   });
 
   it("should make the proper recursive calls", function() {
