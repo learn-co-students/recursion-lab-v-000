@@ -73,6 +73,7 @@ describe('isPalindrome()', function() {
 describe('addUpTo()', function() {
   it("sums all members up to a given index in an array", function() {
     expect(addUpTo([1, 4, 5, 3], 2)).toEqual(10);
+    expect(addUpTo([4, 3, 1, 5], 1)).toEqual(7);
   });
 
   it("makes the proper recursive calls", function() {
@@ -85,6 +86,7 @@ describe('addUpTo()', function() {
 describe('maxOf()', function() {
   it("finds the largest integer in an array", function() {
     expect(maxOf([1, 4, 5, 3])).toEqual(5);
+    expect(maxOf([6, 2, 4, 5])).toEqual(6);
   });
 
   it("makes the proper recursive calls", function() {
