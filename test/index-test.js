@@ -56,7 +56,9 @@ try {
 
       reverseString("pizza");
 
-      expect(reverseString.callCount).toEqual(5);
+      expect(reverseString.callCount)
+        .toBeGreaterThanOrEqualTo(5)
+        .toBeLessThanOrEqualTo(6)
     });
   });
 
