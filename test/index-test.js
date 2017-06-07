@@ -18,6 +18,10 @@ try {
       expect(console.log).toHaveBeenCalledWith("z");
       expect(console.log).toHaveBeenCalledWith("z");
       expect(console.log).toHaveBeenCalledWith("a");
+    });
+
+    it("is not hard-coded", function() {
+      expect.spyOn(console, 'log');
 
       printString('chocolate');
 
