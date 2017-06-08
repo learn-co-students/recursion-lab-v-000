@@ -38,7 +38,6 @@ describe('printString()', function() {
     printString("pizza")
     expect(printString.callCount).toEqual(5)
   })
-
 });
 
 describe('reverseString()', function() {
