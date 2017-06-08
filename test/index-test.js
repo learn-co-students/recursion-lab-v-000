@@ -39,9 +39,9 @@ try {
     it("recurses, calling itself once for each letter in the string", function() {
       var printString = sinon.spy(window, "printString");
 
-      printString("pizza");
+      printString("pizza")
 
-      expect(printString.callCount).toEqual(5);
+      expect(printString.callCount).toEqual(5)
     });
   });
 
