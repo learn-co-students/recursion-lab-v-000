@@ -18,5 +18,17 @@ function reverseString(myString) {
 }
 
 function isPalindrome(string) {
-  
+  var reverseString = ""
+  for(let i = string.length-1; i >= 0; i--) {
+    reverseString += string[i]
+  }
+  if(string === reverseString) {
+    return true
+  } else {
+    return false
+  }
+}
+
+function addUpTo(array, n) {
+
 }
