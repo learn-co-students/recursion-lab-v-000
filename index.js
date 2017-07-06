@@ -10,13 +10,14 @@ function printString(str) {
 }
 
 function reverseString(str) {
-  return str.length > 1 ? reverseString(str.substring(1, str.length)) + str[0] : str[0];
+  return str.length > 1 ? reverseString(str.substring(1, str.length)) + str[0] : str;
 }
 
 function isPalindrome(str) {
-  if (str.length > 1) {
-    if (str[0] == str[str.length - 1]) {
-      return isPalindrome(str.substring(1, str.length - 1));
+  let l = str.length;
+  if (l > 1) {
+    if (str[0] == str[l - 1]) {
+      return isPalindrome(str.substring(1, l - 1));
     } else {
       return false;
     }
@@ -26,29 +27,19 @@ function isPalindrome(str) {
 }
 
 function addUpTo(arr, index) {
-  return index > 0 ? addUpTo(arr, index - 1) + arr[index] : arr[0];
+  return index ? addUpTo(arr, index - 1) + arr[index] : arr[0];
 }
 
 function maxOf(arr) {
-  if (arr.length > 1) {
-    if (arr[0] >= arr[arr.length - 1]) {
-      return maxOf(arr.slice(0, arr.length - 1));
-    } else {
-      return maxOf(arr.slice(1, arr.length));
-    }
-  } else {
-    return arr[0]
-  }
+  return arr.length == 1 ? arr[0] : Math.max(arr.pop(), maxOf(arr));
 }
 
 function includesNumber(arr, num) {
-  if (arr.length > 1) {
-    if (arr[0] == num) {
-      return true;
-    } else {
-      return includesNumber(arr.slice(1, arr.length), num)
-    }
-  } else {
+  if (!arr.length) {
     return false;
+  } else if (arr[0] == num) {
+    return true;
+  } else {
+    return includesNumber(arr.slice(1), num)
   }
 }
