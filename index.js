@@ -11,9 +11,12 @@ function printString(myString){
 
 function reverseString(myString) {
 
-
-  var revString= myString.split("").reverse().join("");
-  return revString
-
-
+    let revString;
+    console.log(revString)
+    if(myString.length > 2) {
+      revString= myString.split("").reverse().join("");
+      reverseString(revString)
+    } else {
+    return myString;
+}
 }
