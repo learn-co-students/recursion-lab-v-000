@@ -62,18 +62,34 @@ function reverseString(string) {
   function maxOf(array) {
 
 
-    if (array.length === 1) {
+    if (array.length < 2) {
       return array[0]
     }
     if (array[0] < array[1]) {
       array = array.slice(1)
-      console.log('index 0 is less than 1')
     }
     else {
-      array = array.splice(1,1)
-      console.log('else')
+      array.splice(1,1)
     }
-    console.log(array)
     return maxOf(array)
 
   }
+
+
+  function includesNumber(array, number) {
+
+    if (array[0] === number) {
+      return true
+    }
+
+    if (array.length < 2) {
+      return false
+    }
+    let newArray = array.slice(1)
+
+    return includesNumber(newArray, number)
+    }
+
+
+
+  
