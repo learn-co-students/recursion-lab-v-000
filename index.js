@@ -20,8 +20,8 @@ function reverseString(string){
   }
 }
 
-function isPalindrome(){
-
+function isPalindrome(string){
+  return string === reverseString(string)
 }
 
 function addUpTo(){
