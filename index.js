@@ -21,11 +21,29 @@ function reverseString(string){
 }
 
 function isPalindrome(string){
-  return string === reverseString(string)
+  let reversed = reverseString(string)
+  console.log(reversed)
+  if(string.length > 1){
+    if (string[0] === reversed[0]){
+
+    console.log(isPalindrome(string.substring(1, string.length -1)))
+    return true
+    } else {
+      return false
+      console.log("maybE?")
+    }
+  } else {
+    return false
+    console.log("false?")
+  }
 }
 
-function addUpTo(){
-
+function addUpTo(n){
+  if(n > 1){
+      addUpTo(n - 1) + n
+  } else {
+    return 1
+  }
 }
 
 function maxOf(){
