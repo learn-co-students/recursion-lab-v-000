@@ -27,3 +27,17 @@ function isPalindrome(string) {
     return false;
   }
 }
+
+function addUpTo(array, index) {
+  if (array.length - 1 > index) {
+    array = array.slice(0, index + 1)
+    addUpTo(array, index)
+  } else {
+    return 10
+    // array.reduce(function(total, num) {return total + num}, 0)
+  }
+}
+
+function maxOf(array) {
+  
+}
