@@ -50,3 +50,16 @@ function maxOf(array) {
     }
   }
 }
+
+function includesNumber(array, element) {
+  if (array.length != 0) {
+    if (array[0] == element) {
+      return true
+    } else {
+      array.shift()
+      return includesNumber(array, element)
+    }
+  } else {
+    return false
+  }
+}
