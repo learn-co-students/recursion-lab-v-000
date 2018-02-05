@@ -38,18 +38,25 @@ function isPalindrome(string){
   }
 }
 
-function addUpTo(n){
-  if(n > 1){
-      addUpTo(n - 1) + n
+function addUpTo(array, index){
+  return index ? array[index] + addUpTo(array, --index) : array[index]
+}
+
+function maxOf(array){
+  if (array.length===1){
+    return array[0]
   } else {
-    return 1
+    //get the max of the shortened array plus max of that
+    return Math.max(array.pop(), maxOf(array))
   }
 }
 
-function maxOf(){
-
-}
-
-function includesNumber(){
-
+function includesNumber(array, number){
+  if (!array.length){
+    return false
+  } else if (array[0] === number) {
+    return true
+  } else {
+    return includesNumber(array.slice(1), number)
+  }
 }
