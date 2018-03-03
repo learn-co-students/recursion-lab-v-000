@@ -1,14 +1,11 @@
 // Code your solution here!
 
 function printString(string) {
-  let newString = string
   console.log(string[0]);
   if (string.length > 1) {
-    newString = string.slice(1, string.length);
-    printString(newString);
-  } else {
-    return true
-  }
+    string = string.slice(1);
+    printString(string);
+  } 
 }
 
 function reverseString(string) {
