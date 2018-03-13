@@ -1,3 +1,6 @@
+// 1. Print the first character in the string
+// 2. If the has more than one character, reduce the original by one character at each iteration, starting from front, and apply the function to the substring
+// 3. Otherwise (=if less than two characters remain in the substring), exit
 
 function printString(string) {
   console.log(string[0]);
@@ -6,6 +9,8 @@ function printString(string) {
   } else
     return true;
 }
+
+
 
 function reverseString(string) {
   var reverse = [];
@@ -27,8 +32,6 @@ function isPalindrome(string) {
     return isPalindrome(substring);
   }
 }
-
-
 
 function addUpTo(array, index) {
   if (index > 0) {
