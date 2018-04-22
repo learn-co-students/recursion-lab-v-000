@@ -18,17 +18,37 @@ function reverseString(string) {
   }
 
 function isPalindrome(string) {
-
+  let length = string.length;
+  if (length < 2){
+    return true;
+  } else if (string[0] === string[length - 1]) {
+    return isPalindrome(string.substring(1, length - 1));
+  } else {
+    return false;
+  }
 }
 
-function addUpto(string) {
-
+function addUpTo(array, index) {
+  return index ?
+    array[index] +
+    addUpTo(array, --index) :
+    array[index];
 }
 
-function maxOf(string) {
-
+function maxOf(array) {
+  if (array.length === 1) {
+    return array[0];
+  } else {
+    return Math.max(array.pop(), maxOf(array));
+  }
 }
 
-function includesNumber(string) {
-
+function includesNumber(array, num) {
+  if (!array.length) {
+    return false;
+  } else if (array[0] === num) {
+    return true;
+  } else {
+    return includesNumber(array.slice(1), num);
+  }
 }
