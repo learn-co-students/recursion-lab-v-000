@@ -23,11 +23,34 @@ function reverseString(string) {
 }
 
 function isPalindrome(string) {
-  if (string.length <= 1) {
+  let str = string.length
+  if (str <= 1) {
     return true
-  } else if (string[string.length - 1] === string[0]) {
-    return isPalindrome(string.substring(1, string.length - 1))
+  } else if (string[str - 1] === string[0]) {
+    return isPalindrome(string.substring(1, str - 1))
   } else {
     return false
+  }
+}
+
+function addUpTo(array, i) {
+  return i ? array[i] + addUpTo(array, --i) : array[i]
+}
+
+function maxOf(array) {
+  if (array.length === 1) {
+    return array[0]
+  } else {
+    return Math.max(array.pop(), maxOf(array))
+  }
+}
+
+function includesNumber(array, number) {
+  if (!array.length) {
+    return false
+  } else if (array[0] === number) {
+    return true
+  } else {
+    return includesNumber(array.slice(1), number)
   }
 }
