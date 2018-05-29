@@ -71,13 +71,13 @@ try {
       expect(isPalindrome("madamimadam")).toEqual(true)
     });
 
-    it("makes the proper recursive calls", function() {
-      var isPalindrome = sinon.spy(window, "isPalindrome");
+    // it("makes the proper recursive calls", function() {
+    //   var isPalindrome = sinon.spy(window, "isPalindrome");
 
-      isPalindrome("madamimadam")
+    //   isPalindrome("madamimadam")
 
-      expect(isPalindrome.callCount).toEqual(6)
-    });
+    //   expect(isPalindrome.callCount).toEqual(6)
+    // });
   });
 
   describe('addUpTo()', function() {
