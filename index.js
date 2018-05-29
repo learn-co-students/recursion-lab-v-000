@@ -21,3 +21,13 @@ function reverseString(string) {
     return string
   }
 }
+
+function isPalindrome(string) {
+  if (string.length <= 1) {
+    return true
+  } else if (string[string.length - 1] === string[0]) {
+    return isPalindrome(string.substring(1, string.length - 1))
+  } else {
+    return false
+  }
+}
