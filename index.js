@@ -42,13 +42,19 @@ function addUpTo(arr, index) {
 }
 
 function maxOf(arr) {
-  let maxNum = arr[0];
-  arr1 = arr.slice(1, arr.length);
-  if (arr1.length > 0) {
-    if (maxOf(arr1) >= maxNum) {
-      maxNum = maxOf(arr1);
-    }
+  if (arr.length === 1) {
+    return arr[0];
   } else {
-    return maxNum;
+    return Math.max(arr.pop(), maxOf(arr));
+  }
+}
+
+function includesNumber(arr, num) {
+  if (arr.length === 0) {
+    return false;
+  } else if (arr[0] === num) {
+    return true;
+  } else {
+    return includesNumber(arr.slice(1, arr.length), num);
   }
 }
