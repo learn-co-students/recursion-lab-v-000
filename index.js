@@ -31,3 +31,13 @@ function isPalindrome(string){
         )
     }
 }
+
+// ARRAY FUNCTIONS
+function addUpTo(array, index){
+    if (0 === index) {
+        return array[0]
+    }
+    else {
+        return array[index] + addUpTo(array, index - 1)
+    }
+}
