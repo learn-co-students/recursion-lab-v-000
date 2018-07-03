@@ -41,3 +41,12 @@ function addUpTo(array, index){
         return array[index] + addUpTo(array, index - 1)
     }
 }
+
+function maxOf(array){
+    if (1 === array.length){
+        return array[0]
+    }
+    else {
+        return Math.max(array[0], maxOf(array.slice(1)))
+    }
+}
