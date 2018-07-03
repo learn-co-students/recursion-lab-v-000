@@ -16,3 +16,18 @@ function reverseString(string){
         return string[lastIndex] + reverseString(string.slice(0, lastIndex))
     }
 }
+
+function isPalindrome(string){
+    console.log(string);
+    
+    if (0 === string.length || 1 === string.length) {
+        return true
+    }
+    else {
+        const lastIndex = string.length - 1
+        return (
+            (string[0] === string[lastIndex]) &&
+            isPalindrome(string.slice(1, lastIndex))
+        )
+    }
+}
