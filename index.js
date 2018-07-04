@@ -50,3 +50,15 @@ function maxOf(array){
         return Math.max(array[0], maxOf(array.slice(1)))
     }
 }
+
+function includesNumber(array, number){
+    if (1 === array.length){
+        return number === array[0]
+    }
+    else {
+        return (
+            number === array [0] ||
+            includesNumber(array.slice(1), number)
+        )
+    }
+}
