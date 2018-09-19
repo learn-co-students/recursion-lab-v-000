@@ -48,3 +48,14 @@ function maxOf(array) {
     }
     return maxOf(array)
 }
+
+function includesNumber(array, n) {
+    if (array.length === 0) {
+        return false
+    } else if(array[0] === n) {
+        return true
+    } else {
+        array.shift()
+        return includesNumber(array, n)
+    }
+}
