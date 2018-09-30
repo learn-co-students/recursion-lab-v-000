@@ -106,7 +106,7 @@ try {
 
       maxOf([1, 4, 5, 3]);
 
-      expect(maxOf.callCount).toEqual(4);
+      expect(maxOf.callCount).toEqual(3);
     });
   });
 
