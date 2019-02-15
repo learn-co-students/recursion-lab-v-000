@@ -11,7 +11,7 @@ A string is a data structure that lends itself to recursive solutions. Can you g
 let myString = 'Algorithm';
 
 // Set 'myString' equal to a substring of itself minus the last letter...
-myString === myString.substring(0, myString.length - 1) +
+myString = myString.substring(0, myString.length - 1) +
 // ...and then add the last letter back:
 myString[myString.length - 1];
 
