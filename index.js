@@ -24,3 +24,6 @@ function printString(myString) {
   }  
 }
 
+function reverseString(string){
+
+}
