@@ -9,16 +9,18 @@ function printString(myString) {
   // 2.
   // console.log(myString[0], myString[1], myString[2], myString[3])
   // 3.
-  let substring;
- 
+
   // Print out the current first character in the string.
   console.log(myString[0]);
  
-  // Store the remainder of the string in the 'substring' variable.
-  substring = myString.substring(1, myString.length);
- 
-  // Invoke printString() from within, passing in the remainder of the previous string.
-  printString(substring);
-  
+  //check if there are more characters to print
+  if(myString.length >1){
+    // Store the remainder of the string in the 'substring' variable.
+    let substring = myString.substring(1, myString.length);
+    // Invoke printString() from within, passing in the remainder of the previous string.
+    printString(substring);
+  }else{
+    return true;
+  }  
 }
 
