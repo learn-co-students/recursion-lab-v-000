@@ -25,5 +25,18 @@ function printString(myString) {
 }
 
 function reverseString(string){
-
+  // 1. string = food
+  // 2. console.log(string[3], string[2], string[1], string[0])
+  // console.log(string[string.length-1], string[string.length-2], string[string.length-3], string[string.length-4])
+  // 3.  
+  //check if there are more characters to print
+  if(string.length >= 1){
+    console.log(string[string.length-1]);
+    // Store the remainder of the string in the 'substring' variable.
+    let substring = string.substring(0, string.length-1);
+    // Invoke reverseString() from within, passing in the remainder of the previous string.
+    reverseString(substring);
+  }else{
+    return true;
+  } 
 }
