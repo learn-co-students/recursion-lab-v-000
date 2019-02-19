@@ -26,8 +26,18 @@ function printString(myString) {
 
 function reverseString(string){
   // 1. string = food
-  // 2. console.log(string[3], string[2], string[1], string[0])
-  // console.log(string[string.length-1], string[string.length-2], string[string.length-3], string[string.length-4])
-  // 3.  
-  return string.split("").reverse().join("")
+  // 2. return, not log!
+  // return str.split("").reverse().join("");
+  // 'd' + 'o' + 'o' + 'f'
+  // string.charAt(3) + string.charAt(2) + string.charAt(1) + string.charAt(0)
+  // 3.
+  // peel off first character & place each subsequent character before it
+  // return the resutling string
+  // return reverseString(string.substring(1, string.length-1)) + string.charAt(0)
+  // add a base case when substring is empty
+  if(string === ""){
+    return "";
+  }else{
+    return reverseString(string.substr(1)) + string.charAt(0);
+  }
 }
