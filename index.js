@@ -19,10 +19,10 @@ function reverseString(myString) {
 }
 
 function isPalindrome(myString) {
-  if (myString[0] !== myString[myString.length - 1]) {
-    return false
-  } else {
+  if (myString[0] === myString[myString.length-1]) {
     isPalindrome(myString.substr(1, myString.length-1))
+  } else {
+    return false
   }
   return true;
   // const length = str.length
