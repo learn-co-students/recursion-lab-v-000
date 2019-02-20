@@ -18,6 +18,14 @@ function reverseString(myString) {
   }
 }
 
-function isPalindrome() {
-  
+function isPalindrome(myString) {
+  const nonWords = /[W_]/g
+  myString.toLowerCase().replace(nonWords, "")
+  const length = myString.length
+  for (var i = 0; i < length / 2; i++) {
+    if (myString[i] !== myString[length - 1 - i]) {
+      return false
+    }
+  }
+  return true
 }
