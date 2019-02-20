@@ -38,6 +38,7 @@
     "mocha-multi": "^0.9.0"
   },
   "dependencies": {
+    "live-server": "^1.2.1",
     "sinon": "^2.0.0"
   }
 }
