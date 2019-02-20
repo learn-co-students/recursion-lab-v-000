@@ -33,3 +33,10 @@ function addUpTo(arr, i) {
   return i ? arr[i] + addUpTo(arr, --i) : arr[i];
 }
 
+function maxOf(myArray) {
+  if (myArray.length === 1) {
+    return myArray[0];
+  } else {
+    return Math.max(myArray.pop(), maxOf(myArray));
+  }
+}
