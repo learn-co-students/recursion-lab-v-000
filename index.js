@@ -29,3 +29,7 @@ function isPalindrome(str) {
   return false
 }
 
+function addUpTo(arr, i) {
+  return i ? arr[i] + addUpTo(arr, --i) : arr[i];
+}
+
