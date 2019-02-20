@@ -63,3 +63,18 @@ function addUpTo(array, index){
     return array.shift();
   }
 }
+
+function maxOf(array){
+  if (array.length > 1) {
+    if (array[0] > array[1]) {
+      array.splice(1, 1);
+      maxOf(array);
+    } else {
+      array.splice(0, 1);
+      maxOf(array);
+    }
+  } else {
+    return array;
+  }
+  return array[0];
+}
