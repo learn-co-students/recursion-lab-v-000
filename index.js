@@ -41,3 +41,15 @@ function reverseString(string){
     return reverseString(string.substr(1)) + string.charAt(0);
   }
 }
+
+function isPalindrome(string){
+  if (string.length > 1) {
+    if (string.charAt(0) !== string.charAt(string.length - 1)) {
+      return false;
+    } else {
+      let substring = string.substr(1, string.length - 2);
+      isPalindrome(substring);
+    }
+  }
+  return true;
+}
