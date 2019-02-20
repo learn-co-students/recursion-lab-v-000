@@ -18,19 +18,14 @@ function reverseString(myString) {
   }
 }
 
-function isPalindrome(myString) {
-  if (myString[0] === myString[myString.length-1]) {
-    isPalindrome(myString.substr(1, myString.length-1))
-  } else {
-    return false
+function isPalindrome(str) {
+  var str = str.toLowerCase();
+  var strLength = str.length;
+  if ([0, 1].includes(strLength)) {
+    return true
+  } else if (str[0] === str[strLength - 1]) {
+    return isPalindrome(str.substr(1, strLength - 2))
   }
-  return true;
-  // const length = str.length
-  // for (var i = 0; i < length / 2; i++) {
-  //   if (str[i] !== str[length - 1 - i]) {
-  //     return false
-  //   }
-  // }
-  // return true
+  return false
 }
 
