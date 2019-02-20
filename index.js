@@ -19,13 +19,18 @@ function reverseString(myString) {
 }
 
 function isPalindrome(myString) {
-  const nonWords = /[W_]/g
-  myString.toLowerCase().replace(nonWords, "")
-  const length = myString.length
-  for (var i = 0; i < length / 2; i++) {
-    if (myString[i] !== myString[length - 1 - i]) {
-      return false
-    }
+  if (myString[0] !== myString[myString.length - 1]) {
+    return false
+  } else {
+    isPalindrome(myString.substr(1, myString.length-1))
   }
-  return true
+  return true;
+  // const length = str.length
+  // for (var i = 0; i < length / 2; i++) {
+  //   if (str[i] !== str[length - 1 - i]) {
+  //     return false
+  //   }
+  // }
+  // return true
 }
+
