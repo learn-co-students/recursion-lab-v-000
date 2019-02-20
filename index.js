@@ -78,3 +78,14 @@ function maxOf(array){
   }
   return array[0];
 }
+
+function includesNumber(array, number) {
+  if(array.length>=1){
+    if (array[0] === number) {
+      return true
+    }else{
+      let newArray = array.shift();
+      return !!includesNumber(array, number)
+    }
+  }
+}
