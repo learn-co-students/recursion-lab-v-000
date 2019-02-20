@@ -53,3 +53,13 @@ function isPalindrome(string){
   }
   return true;
 }
+
+function addUpTo(array, index){
+  if (0 <= index) {
+    let arrayToChange = array
+    let valueToAdd = arrayToChange.shift();
+    return addUpTo(arrayToChange, index-1) + valueToAdd;
+  } else {
+    return 0;
+  }
+}
