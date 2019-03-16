@@ -1,12 +1,10 @@
 // Code your solution here!
-function printString(myString) {
-  console.log(myString[0]);
-
-  if (myString.length > 1) {
-    let mySubString = myString.substring(1, myString.length);
-    printString(mySubString);
+function printString(string) {
+  console.log(string[0])
+  if (string.length > 1) {
+    return printString(string.substring(1))
   } else {
-    return true;
+    return true
   }
 }
 
@@ -34,18 +32,18 @@ function isPalindrome(string) {
 
 // Given an array and an index, write a recursive function to add up the elements of an array.
 // bad and ugly and hacky! bad code! stanky!
-// let sum = 0
-// function addUpTo(array, idx) {
-//   sum += array[0]
-//   let myArray = array.splice(1, array.length)
-//   if (idx > 0) {
-//     return addUpTo(myArray, --idx)
-//   } else {
-//     let done = sum
-//     sum = 0
-//     return done
-//   }
-// }
+let sum = 0
+function addUpTo(array, idx) {
+  sum += array[0]
+  let myArray = array.splice(1, array.length)
+  if (idx > 0) {
+    return addUpTo(myArray, --idx)
+  } else {
+    let done = sum
+    sum = 0
+    return done
+  }
+}
 
 //happy-medium refactoring:
 function addUpTo(array, idx) {
@@ -83,3 +81,16 @@ function addUpTo(array, idx) {
 //     return Math.max(myArray.pop(), maxOf(myArray));
 //   }
 // }
+
+// Write out a function to see if an array includes a given element.
+function includesNumber(array, el) {
+  if (array.length > 0) {
+    if (array.shift() === el) {
+      return true
+    } else {
+      return includesNumber(array, el)
+    }
+  } else {
+    return false
+  }
+}
