@@ -53,4 +53,20 @@ function isPalindrome(myString){
     return maxOf(newArr)
   }
 
+  function includesNumber(arr,num){
+    let newArr=arr.slice()
+    if (arr[0]==num) {
+        return true
+      } else {
+        if (newArr.length>1){
+          newArr.splice(0,1)
+          return includesNumber(newArr,num)
+        } else {
+          return false
+        }
+      }
+    }
+
+
+
   //console.log(isPalindrome("madam"))
