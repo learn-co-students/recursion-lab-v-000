@@ -16,3 +16,18 @@ function reverseString(myString){
     return myString[0]
   }
 }
+
+function isPalindrome(myString){
+  console.log(myString)
+  if (myString.length<2){
+    return true
+  }
+
+  if (myString[0]===myString[myString.length-1] ){
+      return isPalindrome(myString.substring(1,myString.length-1))
+  }
+
+  return false
+  }
+
+  console.log(isPalindrome("madam"))
