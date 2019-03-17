@@ -38,4 +38,19 @@ function isPalindrome(myString){
     }
   }
 
+  function maxOf(arr){
+    let newArr=arr.slice()
+
+    if (newArr.length===1){
+      return newArr[0]
+    }
+
+    if (newArr[0]<newArr[1]){
+      newArr.splice(0,1)
+    } else {
+      newArr.splice(1,1)
+    }
+    return maxOf(newArr)
+  }
+
   //console.log(isPalindrome("madam"))
