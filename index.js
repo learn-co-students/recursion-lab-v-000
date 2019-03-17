@@ -30,4 +30,12 @@ function isPalindrome(myString){
   return false
   }
 
-  console.log(isPalindrome("madam"))
+  function addUpTo(arr,num){
+    if (num>0) {
+      return arr[num]+addUpTo(arr,num-1)
+    } else {
+      return arr[num]
+    }
+  }
+
+  //console.log(isPalindrome("madam"))
