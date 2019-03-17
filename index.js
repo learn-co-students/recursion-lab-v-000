@@ -7,3 +7,12 @@ function printString(myString){
     return true
   }
 }
+
+function reverseString(myString){
+  //let reverse=myString[myString.length-1]
+  if (myString.length>1){
+    return myString[myString.length-1]+reverseString(myString.substring(0,myString.length-1))
+  }else{
+    return myString[0]
+  }
+}
