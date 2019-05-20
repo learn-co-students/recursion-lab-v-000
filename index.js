@@ -32,3 +32,22 @@ function isPalindrome(string) {
     return true;
   }
 }
+
+function addUpTo(array, index) {
+  if (array.length >= 1 && index > 0) {
+    let firstItem = array.shift();
+    return firstItem + addUpTo(array, index - 1);
+  } else if (array.length >= 1 && index === 0) {
+    return array.shift();
+  } else {
+    return false;
+  }
+}
+
+function maxOf(array) {
+
+}
+
+function includesNumber(num) {
+
+}
