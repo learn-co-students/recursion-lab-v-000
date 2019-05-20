@@ -9,15 +9,26 @@ function printString(myString) {
   }
 }
 
-let reversedString = ''
-
-function reverseString(myString) {
-  reversedString += myString[myString.length-1];
-  console.log(reversedString);
-  if (myString.length > 1) {
-    let mySubString = myString.substring(0, myString.length-1);
-    reverseString(mySubString);
+function reverseString(string) {
+  if (string.length > 1) {
+    let mySubString = string.substring(0, string.length-1);
+    return string[string.length-1] += reverseString(mySubString)
   } else {
-    return reversedString;
+    return string;
+  }
+}
+
+function isPalindrome(string) {
+  if (string.length > 1) {
+    let firstChar = string[0];
+    let lastChar = string[string.length-1];
+    if (firstChar === lastChar) {
+      let mySubString = string.substring(1, string.length-1);
+      return isPalindrome(mySubString);
+    } else {
+      return false;
+    }
+  } else {
+    return false;
   }
 }
