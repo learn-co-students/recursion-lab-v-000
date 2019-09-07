@@ -11,15 +11,17 @@ function printString(myString) {
     }
   }
 
+
   function reverseString(myString) {
-      let newString; 
-      if (myString.length > 1) {
-        let lastLetterIndex = myString.length - 1;
-        newString += myString[lastLetterIndex]; 
-        console.log (newString)
-        reverseString(myString.substring(0, lastLetterIndex))
-      } else {
-      console.log(newString)
-      return newString;
-      }
-  }
+    let lastLetterIndex = myString.length - 1; 
+    let newString;  
+
+    if (lastLetterIndex > 0) {
+        newString = newString + myString[lastLetterIndex]; 
+        let subString = myString.substring(0, lastLetterIndex); 
+        reverseString(subString); 
+    } else { 
+        newString = newString + myString; 
+        return newString; 
+    }
+}
