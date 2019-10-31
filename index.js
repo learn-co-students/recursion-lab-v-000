@@ -3,19 +3,15 @@
 function printString(str) {
   console.log(str[0]);
 
-  if(str.length == 1) {
-    return true
-  }
+  if(str.length == 1) { return true }
   const substr = str.substring(1, str.length);
   printString(substr);
 
 }
 
 function reverseString(s) {
-  if(s.length === 1) {
-    return s
-  }
-  return reverseString(s.substring(1)) + s[0]
+  if(s.length === 1) { return s }
+  return reverseString(s.substring(1)) + s[0];
 }
 
 function sumUpTo(n) {
@@ -30,9 +26,7 @@ function isPalindrome(s) {
 }
 
 function addUpTo(arr, i) {
-  if(i == 0) {
-    return arr[i]
-  }
+  if(i == 0) { return arr[i] }
   return arr[i] + addUpTo(arr, --i);
 }
 
